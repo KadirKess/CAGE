@@ -8,8 +8,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    env:
-      MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -21,5 +19,9 @@ jobs:
         run: uv sync --locked --extra dev
       - name: Check environment
         run: uv run --locked --extra dev python scripts/check_environment.py
+        env:
+          MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
       - name: Run offline test suite
         run: uv run --locked --extra dev pytest -v
+        env:
+          MPLCONFIGDIR: ${{ runner.temp }}/matplotlib
