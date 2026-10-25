@@ -1,0 +1,23 @@
+{
+  "study": "v0.1",
+  "seeds": [17, 43, 71],
+  "eval_sigmas": [0.0, 0.1, 0.3, 0.5],
+  "shared": {
+    "epochs": 500,
+    "lr": 0.001,
+    "lr_scheduler_patience": 10,
+    "lr_scheduler_factor": 0.1,
+    "batch_size": 64,
+    "data_dir": "data",
+    "num_workers": 0,
+    "device": "auto",
+    "precision": "bf16",
+    "tf32": false,
+    "compile": true,
+    "compile_backend": "inductor",
+    "amp_init_scale": 1024.0,
+    "max_grad_norm": 1.0,
+    "early_stopping_patience": 20,
+    "early_stopping_min_delta": 0.0
+  }
+}

@@ -1,0 +1,10 @@
+torch==2.11.0
+torchvision==0.26.0
+pillow==12.3.0
+matplotlib==3.10.8
+numpy==2.2.6
+scipy==1.15.3
+pytest==9.0.3
+torchmetrics==1.9.0
+grad-cam==1.5.5
+pytorch-msssim==1.0.0

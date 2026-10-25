@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use CAGE, please cite this repository."
+title: "CAGE: Classifier-Aware Generative Enhancement"
+version: 0.1.0
+type: software
+authors:
+  - family-names: Kessaria
+    given-names: Abdulkadir
+license: MIT
+repository-code: "https://github.com/KadirKess/CAGE"

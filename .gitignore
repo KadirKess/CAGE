@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.DS_Store
+data/
+.venv/
+.mypy_cache/
+outputs/
+notebooks/outputs/
+runs/
+*.pt
+.vscode

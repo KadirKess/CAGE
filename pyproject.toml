@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cage-research"
+version = "0.1.0"
+description = "Classifier-Aware Generative Enhancement research pipeline"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+license = {file = "LICENSE"}
+authors = [{name = "Abdulkadir Kessaria"}]
+dependencies = [
+  "torch==2.11.0",
+  "torchvision==0.26.0",
+  "pillow==12.3.0",
+  "matplotlib==3.10.8",
+  "numpy==2.2.6",
+  "scipy==1.15.3",
+  "torchmetrics==1.9.0",
+  "grad-cam==1.5.5",
+  "pytorch-msssim==1.0.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.0.3"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.setuptools]
+packages = ["cage", "cage.models"]
+
+[tool.uv.sources]
+# This wheel imports on recent macOS; the macOS 14 wheel fails in PROPACK.
+scipy = [
+  { url = "https://files.pythonhosted.org/packages/a0/6e/0c3bf90fae0e910c274db43304ebe25a6b391327f3f10b5dcc638c090795/scipy-1.15.3-cp310-cp310-macosx_12_0_arm64.whl", marker = "sys_platform == 'darwin' and platform_machine == 'arm64'" },
+]
